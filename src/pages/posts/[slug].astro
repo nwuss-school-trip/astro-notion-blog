@@ -114,12 +114,13 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
   </div>
 
   <div slot="aside" class="aside">
+  <!--同じカテゴリの表示は修学旅行のwebページでは必要ないか?
     <BlogPostsLink
       heading="同じカテゴリの記事"
       posts={postsHavingSameTag.filter(
         (p: interfaces.Post) => p.Slug !== post.Slug
       )}
-    />
+    />-->
     <BlogPostsLink heading="おすすめ" posts={rankedPosts} />
     <BlogPostsLink heading="最新の記事" posts={recentPosts} />
     <BlogTagsLink heading="カテゴリ" tags={tags} />
